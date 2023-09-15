@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const ContactsList = ({ contacts }) => {
     const { socials } = contacts
@@ -8,12 +7,12 @@ const ContactsList = ({ contacts }) => {
             <ul>
                 {
                     socials.map((social, index) => {
-                        const { link, image } = social
+                        const { link, icon } = social
                         return (
                             <li>
-                                <a href={link}>
+                                <a href={link} target='blank'>
                                     <span class="ico-circle">
-                                        <i class="ion-social-linkedin"></i>
+                                        <FontAwesomeIcon icon={icon} className='icons'/>
                                     </span>
                                 </a>
                             </li>
